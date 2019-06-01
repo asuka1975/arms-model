@@ -15,11 +15,11 @@ int main(int argc, char* argv[]) {
 	glutInit(&argc, argv);
 
 	glutInitDisplayMode(GLUT_RGBA);
-	glutInitWindowSize(500, 500);
+	glutInitWindowSize(1000, 500);
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("graph");
 
-	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glClearColor(0.1, 0.2, 0.3, 0.0);
 
 	glutDisplayFunc(display);
 
@@ -46,7 +46,7 @@ void display(void)
 	std::vector<int> B = model.GetAgentRecord(1);
 	std::vector<int> T = model.GetAgentRecord(2);
 
-	glColor3f(1.0, 0.0, 0.0);
+	glColor3f(0.2, 0.9, 0.9);
 	glBegin(GL_LINE_STRIP);
 	for (int i = 0; i < T.size(); i++) {
 		double a = static_cast<double>(A[i]) / 200;
